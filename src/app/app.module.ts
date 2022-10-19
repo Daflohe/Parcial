@@ -23,6 +23,10 @@ import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { DocenteComponent } from './Components/docente/docente.component';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +39,9 @@ import { DocenteComponent } from './Components/docente/docente.component';
     DocenteComponent
   ],
   imports: [
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule,
     HttpClientModule,
     MatDialogModule,
     BrowserModule,

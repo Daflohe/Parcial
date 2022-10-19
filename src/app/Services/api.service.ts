@@ -14,6 +14,12 @@ export class ApiService {
     return this.http.post(this.url+controller,obj).subscribe((res)=>
     console.log(res))
   }
-
+ async getAll(controller: string) {
+    var DataResponse: any;
+    await this.http.get(this.url + controller).toPromise().then((res) => {
+      DataResponse = res;
+    })
+    return DataResponse;
+  }
   
 }
